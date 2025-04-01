@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import './App.css'
 
 const recipes = [
@@ -9,7 +10,7 @@ const recipes = [
 ];
 
 function App() {
-
+  const [value, setValue] = useState(recipes)
 
   return (
     <>
@@ -31,10 +32,10 @@ function App() {
      
 
       <h1>Les recettes oRecipes</h1>
-      <p>Voici nos {recipes.length} recettes</p>
+      <p>Voici nos {value.length} recettes</p>
 
       <div className="gridRecipes">
-        {recipes.map((recipe) => (
+        {value.map((recipe) => (
           <div key={recipe.id} className='cardRecipe'>
             <h3>{recipe.name}</h3>
             <p>Difficulté : {recipe.difficulty}</p>
