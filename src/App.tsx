@@ -12,6 +12,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <>
     <div className='menu'>
       <h2>Accueil</h2>
       <ul>{recipes.map((recipe, index) => (
@@ -20,6 +21,15 @@ function App() {
       </ul>
     </div>
 
+    <div className='mainContent'>
+      <div className='connexionBar'>
+        <input type="email" placeholder='Adresse Email'/>
+        <input type="password" placeholder='mot de passe' />
+        <button>OK</button>
+      </div>
+    </div>
+</>
+    
 
   )
 }
