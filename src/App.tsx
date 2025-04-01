@@ -28,6 +28,19 @@ function App() {
         <button>OK</button>
       </div>
     </div>
+
+    <h1>Les recettes Orecipes</h1>
+    <p>Voici nos {recipes.length} recettes</p>
+
+    <div className="gridRecipes">
+      {recipes.map((recipes, index)=> (
+        <div key={index} className='cardRecipe'>
+          <h3>{recipes.name}</h3>
+          <p>Difficulté : {recipes.difficulty}</p>
+          <a href="#"className='btn'>Voir la recette</a>
+        </div>
+      ))}
+    </div>
 </>
     
 
